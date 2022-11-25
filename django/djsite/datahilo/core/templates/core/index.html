@@ -1,503 +1,399 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Crypto - ICO Crypto, Blockchain & Cryptocurrency Web Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'core/img/favicon.png' %}">
+        <!-- Place favicon.png in the root directory -->
 
-        <!--<link rel="stylesheet" href="css/icon-font.css">-->
-
-        <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'core/css/style.comp.css' %}">
-        <link rel="stylesheet" href="{% static 'core/css/style.concat.css' %}">
-        <link rel="stylesheet" href="{% static 'core/css/icon-font.css' %}">
-        <link rel="stylesheet" href="{% static 'core/css/style.prefix.css' %}">
-        <link rel="shortcut icon" type="image/png" href="{% static 'core/img/favicon.png' %}">
-        
-        <title>DataHilo | Machine Learning for Economics</title>
+		<!-- ========================= CSS here ========================= -->
+		<link rel="stylesheet" href="{% static 'core/css/bootstrap-5.0.0-alpha-1.min.css' %}">
+        <link rel="stylesheet" href="{% static 'core/css/LineIcons.2.0.css' %}">
+		<link rel="stylesheet" href="{% static '/core/css/animate.css' %}">
+		<link rel="stylesheet" href="{% static '/core/css/main.css' %}">
     </head>
-
     <body>
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
 
-            <label for="navi-toggle" class="navigation__button">
-                <span class="navigation__icon">&nbsp;</span>
-            </label>
-
-            <div class="navigation__background">&nbsp;</div>
-
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natous</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
-                    </ul>
-            </nav>
-        </div>
-
-        <header class="header">
-            <div class="header__logo-box">
-                <img src="{% static 'core/img/logo-white.png' %}" alt="Logo" class="header__logo">
+        <!-- ========================= preloader start ========================= -->
+            <div class="preloader d-none">
+                <div class="loader">
+                    <div class="ytp-spinner">
+                        <div class="ytp-spinner-container">
+                            <div class="ytp-spinner-rotator">
+                                <div class="ytp-spinner-left">
+                                    <div class="ytp-spinner-circle"></div>
+                                </div>
+                                <div class="ytp-spinner-right">
+                                    <div class="ytp-spinner-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        <!-- preloader end -->
 
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--main">DataHilo</span>
-                    <span class="heading-primary--sub">is forecasting economic markets and signs of recession using Machine Learning</span>
-                </h1>
+        <!-- ========================= header start ========================= -->
+        <header class="header navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="{% url 'index' %}">
+                                <img src="{% static 'core/img/logo-main.png' %}" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
 
-                <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
-            </div>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="page-scroll active" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#service">Service</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#roadmap">Roadmap</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#team">Team</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        
         </header>
+        <!-- ========================= header end ========================= -->
 
-        <main>
-            <section class="section-about">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                        Exciting tours for adventurous people
-                    </h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
-                        <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui.
-                        </p>
-
-                        <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like you never have before</h3>
-                        <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
-                        </p>
-
-                        <a href="#" class="btn-text">Learn more &rarr;</a>
-                    </div>
-                    <div class="col-1-of-2">
-                        <div class="composition">
-
-                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 1"
-                                 class="composition__photo composition__photo--p1"
-                                 src="{% static 'core/img/nat-1-large.jpg' %}">
-
-                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 2"
-                                 class="composition__photo composition__photo--p2"
-                                 src="{% static 'core/static/core/img/nat-2-large.jpg' %}">
-
-                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
-                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                                 alt="Photo 3"
-                                 class="composition__photo composition__photo--p3"
-                                 src="{% static 'core/static/core/img/nat-3-large.jpg' %}">
-
-                            <!--
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
-                            -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-features">
-                
-                <div class="row">
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-world"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-compass"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Meet nature</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-map"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Find your way</h3>
-                             <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-heart"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Live a healthier life</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-tours" id="section-tours">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                        Most popular tours
-                    </h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-1-of-3">
-                       <div class="card">
-                           <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--1">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--1">The Sea Explorer</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li>3 day tours</li>
-                                        <li>Up to 30 people</li>
-                                        <li>2 tour guides</li>
-                                        <li>Sleep in cozy hotels</li>
-                                        <li>Difficulty: easy</li>
-                                    </ul>
-                                </div>
-                           </div>
-                           <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">Only</p>
-                                        <p class="card__price-value">$297</p>
-                                    </div>
-                                    <a href="#popup" class="btn btn--white">Book now!</a>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-
-
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--2">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--2">The Forest Hiker</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li>7 day tours</li>
-                                        <li>Up to 40 people</li>
-                                        <li>6 tour guides</li>
-                                        <li>Sleep in provided tents</li>
-                                        <li>Difficulty: medium</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="card__side card__side--back card__side--back-2">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">Only</p>
-                                        <p class="card__price-value">$497</p>
-                                    </div>
-                                    <a href="#popup" class="btn btn--white">Book now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--3">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--3">The Snow Adventurer</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li>5 day tours</li>
-                                        <li>Up to 15 people</li>
-                                        <li>3 tour guides</li>
-                                        <li>Sleep in provided tents</li>
-                                        <li>Difficulty: hard</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="card__side card__side--back card__side--back-3">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">Only</p>
-                                        <p class="card__price-value">$897</p>
-                                    </div>
-                                    <a href="#popup" class="btn btn--white">Book now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="u-center-text u-margin-top-huge">
-                    <a href="#" class="btn btn--green">Discover all tours</a>
-                </div>
-            </section>
-
-            <section class="section-stories">
-                <div class="bg-video">
-                    <video class="bg-video__content" autoplay muted loop>
-                        <source src="/django/djsite/datahilo/core/static/core/img/video.mp4" type="video/mp4">
-                        <source src="/django/djsite/datahilo/core/static/core/img/video.webm" type="video/webm">
-                        Your browser is not supported!
-                    </video>
-                </div>
-
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                        We make people genuinely happy
-                    </h2>
-                </div>
-
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__shape">
-                            <img src="/django/djsite/datahilo/core/static/core/img/nat-8.jpg" alt="Person on a tour" class="story__img">
-                            <figcaption class="story__caption">Mary Smith</figcaption>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__shape">
-                            <img src="/django/djsite/datahilo/core/static/core/img/nat-9.jpg" alt="Person on a tour" class="story__img">
-                            <figcaption class="story__caption">Jack Wilson</figcaption>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary u-margin-bottom-small">WOW! My life is completely different now</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="u-center-text u-margin-top-huge">
-                    <a href="#" class="btn-text">Read all stories &rarr;</a>
-                </div>
-            </section>
-
-            <section class="section-book">
-                <div class="row">
-                    <div class="book">
-                        <div class="book__form">
-                            <form action="#" class="form">
-                                <div class="u-margin-bottom-medium">
-                                    <h2 class="heading-secondary">
-                                        Start booking now
-                                    </h2>
-                                </div>
-
-                                <div class="form__group">
-                                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
-                                    <label for="name" class="form__label">Full name</label>
-                                </div>
-
-                                <div class="form__group">
-                                    <input type="email" class="form__input" placeholder="Email address" id="email" required>
-                                    <label for="email" class="form__label">Email address</label>
-                                </div>
-
-                                <div class="form__group u-margin-bottom-medium">
-                                    <div class="form__radio-group">
-                                        <input type="radio" class="form__radio-input" id="small" name="size">
-                                        <label for="small" class="form__radio-label">
-                                            <span class="form__radio-button"></span>
-                                            Small tour group
-                                        </label>
-                                    </div>
-
-                                    <div class="form__radio-group">
-                                        <input type="radio" class="form__radio-input" id="large" name="size">
-                                        <label for="large" class="form__radio-label">
-                                            <span class="form__radio-button"></span>
-                                            Large tour group
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="form__group">
-                                    <button class="btn btn--green">Next step &rarr;</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer__logo-box">
-
-                <picture class="footer__logo">
-                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
-                            media="(max-width: 37.5em)">
-                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="/django/djsite/datahilo/core/static/core/img/logo-green-2x.png">
-                </picture>
-
-
-                
+        <!-- ========================= hero-section start ========================= -->
+        <section id="home" class="hero-section">
+            <div class="shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
             </div>
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="footer__navigation">
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-                        </ul>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="hero-content-wrapper">
+                            <h1 class="text-white wow fadeInDown" data-wow-delay=".2s">We are forecasting trade markets using Machine Learning</h1>
+                            <p class="text-white wow fadeInLeft"  data-wow-delay=".4s">DataHilo is a service which analyzing financial assets datasets and predicts trends of global markets, corrections and signs of recession</p>
+                            <a href="#" class="theme-btn wow fadeInUp"  data-wow-delay=".6s">Get started</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-1-of-2">
-                    <p class="footer__copyright">
-                        Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>.
-                        Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal
-                        and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas
-                        Schmedtmann, is of course highly appreciated!
-                    </p>
-                </div>
-            </div>
-        </footer>
-
-        <div class="popup" id="popup">
-            <div class="popup__content">
-                <div class="popup__left">
-                    <img src="/django/djsite/datahilo/core/static/core/img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                    <img src="/django/djsite/datahilo/core/static/core/img/nat-9.jpg" alt="Tour photo" class="popup__img">
-                </div>
-                <div class="popup__right">
-                    <a href="#section-tours" class="popup__close">&times;</a>
-                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-                    <p class="popup__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit
-                        amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim
-                        sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
-                        gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
-                        Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus
-                        vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
-                        vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
-                        euismod nisi porta.
-                    </p>
-                    <a href="#" class="btn btn--green">Book now</a>
-                </div>
-            </div>
-        </div>
-
-        <!--
-        <section class="grid-test">
-            <div class="row">
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-2-of-3">
-                    Col 2 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-2-of-4">
-                    Col 2 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-3-of-4">
-                    Col 3 of 4
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="hero-img">
+                            <img src="{% static 'core/img/hero-img.svg' %}" alt="" class="wow fadeInRight"  data-wow-delay=".5s">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        -->
+        <!-- ========================= hero-section end ========================= -->
 
+        <!--========================= feature-section start========================= -->
+        <section id="feature" class="feature-section pt-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8 mx-auto">
+                        <div class="section-title text-center mb-55">
+                            <h2 class="mb-20 wow fadeInUp" data-wow-delay=".2s">Our Specialities</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore .</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-wrapper">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".2s">
+                                <div class="feature-img mb-20">
+                                    <img src="{% static 'core/img/feature-1.svg' %}" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Buy Your Crypto</h5>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore .</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="feature-img mb-25">
+                                    <img src="{% static 'core/img/feature-2.svg' %}" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Sell Instantly</h5>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore .</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".6s">
+                                <div class="feature-img mb-20">
+                                    <img src="{% static 'core/img/feature-3.svg' %}" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Invest for Longterm</h5>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore .</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--========================= feature-section end========================= -->
+
+        <!-- ========================= about-section start ========================= -->
+        <section id="about" class="about-section pt-150 pb-20">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-img mb-30">
+                            <img src="{% static 'core/img/about-img.svg' %}" alt="image" class=" wow fadeInLeft" data-wow-delay=".4s">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-content mb-30">
+                            <div class="section-title mb-40">
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s">About Us</h2>
+                            </div>
+                            <p class="mb-15 wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore.</p>
+                            <p class="mb-35 wow fadeInUp" data-wow-delay=".6s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore.</p>
+                            <a href="#" class="theme-btn theme-btn-2 wow fadeInRight" data-wow-delay=".8s">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================= about-section end ========================= -->
+
+        <!-- ========================= service-section start ========================= -->
+        <section id="service" class="service-section pt-150 pb-120">
+            <div class="container text-center">
+            <h1>You are using free lite version of Crypto</h1>
+            <p>Please, purchase full version to get all sections, elements, permission to remove footer credit</p></br>
+            <a href="https://rebrand.ly/ud-crypto" rel="nofollow" target="_blank" class="theme-btn wow fadeInUp" data-wow-delay=".6s">Purchase Now</a>
+            </div>
+        </section>
+        <!-- ========================= service-section end ========================= -->
+
+        <!-- ========================= roadmap-section start ========================= -->
+        <section id="roadmap" class="roadmap-section pt-100 pb-70 img-bg">
+
+        </section>
+        <!-- ========================= roadmap-section end ========================= -->
+
+        <!-- ========================= grows-section start ========================= -->
+        <section class="grows-section pt-150">
+
+        </section>
+        <!-- ========================= grows-section end ========================= -->
+
+        <!-- ========================= team-section start ========================= -->
+        <section id="team" class="team-section pt-120 pb-120">
+
+        </section>
+        <!-- ========================= team-section end ========================= -->
+
+        <!-- ========================= countdown-section start ========================= -->
+        <section class="countdown-section pt-70 pb-70 img-bg" style="background-color:  rgba(19, 19, 233, 0.792)">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="countdown-img">
+                            <img src="{% static 'core/img/countdown-img.svg' %}" alt="" class=" wow fadeInLeft" data-wow-delay=".4s">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="countdown-content-wrapper">
+                            <div class="countdown">
+                                <ul id="countdown-example">
+                                    <li><span class="days">89</span>
+                                        <p class="days_text">DAYS</p>
+                                    </li>
+                                    <li><span class="hours">53</span>
+                                        <p class="hours_text">HOUR</p>
+                                    </li>
+                                    <li><span class="minutes">34</span>
+                                        <p class="minutes_text">MINS</p>
+                                    </li>
+                                    <li><span class="seconds">08</span>
+                                        <p class="seconds_text">SECS</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="countdown-content">
+                                <h2 class="text-white mb-35  wow fadeInUp" data-wow-delay=".2s">Smart and Secure Way
+                                to Invest in Crypto</h2>
+                                <p class="text-white mb-30 wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore.</p>
+                                <a href="#" class="theme-btn wow fadeInUp" data-wow-delay=".6s">Buy Token Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================= countdown-section end ========================= -->
+
+        <!-- ========================= contact-section start ========================= -->
+        <section id="contact" class="contact-section pt-120 pb-105">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="contact-wrapper mb-30">
+                            <h2 class="mb-20 wow fadeInDown" data-wow-delay=".2s">Cotact With Us</h2>
+                            <p class="mb-55 wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt.</p>
+                            <form action="assets/mail.php" method="POST" id="contact-form" class="contact-form">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <input type="text" id="name" name="name" placeholder="Name">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <input type="email" id="email" name="email" placeholder="Email">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <input type="text" id="phone" name="phone" placeholder="Phone">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
+                                    </div>
+                                </div>                                
+                                <button type="submit" class="theme-btn theme-btn-2">SEND MESSAGE</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5">
+                        <div class="contact-map mb-30">
+                            <div class="map-canvas">
+                                <iframe class="map" id="gmap_canvas"
+                                    src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================= contact-section end ========================= -->
+
+        <!-- ========================= footer start ========================= -->
+        <footer class="footer pt-100 img-bg" style="background-color: rgba(19, 19, 233, 0.792);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
+                            <a href="{% url 'index' %}" class="logo mb-40"><img src="{% static 'core/img/logo-main.png' %}" alt=""></a>
+                            <p class="mb-30">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut labore.</p>
+                            <div class="footer-social-links">
+                                <ul>
+                                    <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6">
+                        <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                            <h4>Company</h4>
+                            <ul class="footer-links">
+                                <li>
+                                    <a href="javascript:void(0)">Home</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">About</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Service</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Team</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6">
+                        <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
+                            <h4>Resource</h4>
+                            <ul class="footer-links">
+                                <li>
+                                    <a href="javascript:void(0)">Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">IOS & Android Apps</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Support Forum</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Terms Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6">
+                        <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
+                            <h4>Resource</h4>
+                            <ul>
+                                <li class="mb-30">
+                                    <p>Company No: C5B345 <br>
+                                        CSINE GROUP LTD.</p>
+                                </li>
+                                <li>
+                                    <p>Address: M-321 Volunt Ave, <br> Staten Islandm, NY 201526</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ========================= footer end ========================= -->
+
+
+        <!-- ========================= scroll-top ========================= -->
+        <a href="#" class="scroll-top">
+            <i class="lni lni-chevron-up"></i>
+        </a>
+        
+		<!-- ========================= JS here ========================= -->
+		<script src="{% static 'core/js/bootstrap.bundle-5.0.0.alpha-1-min.js' %}"></script>
+        <script src="{% static 'core/js/contact-form.js' %}"></script>
+        <script src="{% static 'core/js/wow.min.js' %}"></script>
+		<script src="{% static 'core/js/main.js' %}"></script>
     </body>
 </html>
