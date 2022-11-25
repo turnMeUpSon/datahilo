@@ -5,3 +5,6 @@ def index(request):
 
 def testing(request):
     return render(request, 'core/test.html')
+
+def row(request):
+    return render(request, 'core/row.html')
