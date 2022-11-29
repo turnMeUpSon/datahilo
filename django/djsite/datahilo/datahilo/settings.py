@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,7 +14,7 @@ SECRET_KEY = 'django-insecure-*1*8(xv2to0+z!s)++q5k1m8w-!3zy3e8$5k4r5uq*etka-bl!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -43,8 +44,9 @@ ROOT_URLCONF = 'datahilo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [
+            'datahilo'
+        ],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -52,6 +54,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'loaders': (
+                'admin_tools.template_loaders.Loader',
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ),
         },
     },
 ]
@@ -64,8 +71,12 @@ WSGI_APPLICATION = 'datahilo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'datahilo',
+        'USER': 'admin',
+        'PASSWORD': '1!2@3#4$YanMiller',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -104,9 +115,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
