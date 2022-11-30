@@ -288,9 +288,8 @@
       </div>
     </section>
     <!-- ========================= about-section end ========================= -->
-    <br />
 
-    <!-- ========================= data-section end ========================= -->
+    <!-- ========================= data-section start ========================= -->
     <section id="data">
       <nav class="navbar bg-light">
         <div class="container-fluid">
@@ -304,7 +303,7 @@
             <input
               class="form-control me-2"
               name="query"
-              type="text"
+              type="search"
               placeholder="Search indicators"
               aria-label="Search"
             />
@@ -316,22 +315,24 @@
       </nav>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
+          <br />
+          <h3>Search results:</h3>
           <thead>
             <tr>
               <th scope="col"><h4>Name</h4></th>
               <th scope="col"><h4>Symbol</h4></th>
               <th scope="col"><h4>Details</h4></th>
-              <th scope="col"><h4>Indicator</h4></th>
             </tr>
           </thead>
           <br />
           <tbody>
+            {% if indicators %} {% for i in indicators %}
             <tr>
               <td>
-                <h6>{{indicator1.title}}</h6>
+                <h6>{{i.title}}</h6>
               </td>
               <td>
-                <h6>{{indicator1.symbol}}</h6>
+                <h6>{{i.symbol}}</h6>
               </td>
               <td>
                 <a
@@ -341,343 +342,10 @@
                   >Learn More</a
                 >
               </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WQBB&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
             </tr>
-            <tr>
-              <td>
-                <h6>{{indicator2.title}}</h6>
-              </td>
-              <td>
-                <h6>{{indicator2.symbol}}</h6>
-              </td>
-              <td>
-                <a
-                  href="{% url 'index' %}"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WTC5&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h6>{{indicator3.title}}</h6>
-              </td>
-              <td>
-                <h6>{{indicator3.symbol}}</h6>
-              </td>
-              <td>
-                <a
-                  href="{% url 'index' %}"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=Vzh4&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h6>{{indicator4.title}}</h6>
-              </td>
-              <td>
-                <h6>{{indicator4.symbol}}</h6>
-              </td>
-              <td>
-                <a
-                  href="{% url 'index' %}"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWzW&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h6>{{indicator5.title}}</h6>
-              </td>
-              <td>
-                <h6>{{indicator5.symbol}}</h6>
-              </td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWlH&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator6.title}}</h6></td>
-              <td><h6>{{indicator6.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWAX&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator7.title}}</h6></td>
-              <td><h6>{{indicator7.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWCB&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator8.title}}</h6></td>
-              <td><h6>{{indicator8.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWNK&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h6>{{indicator9.title}}</h6>
-              </td>
-              <td><h6>{{indicator9.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWOd&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator10.title}}</h6></td>
-              <td><h6>{{indicator10.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WVWA&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator11.title}}</h6></td>
-              <td><h6>{{indicator11.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=VX95&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator12.title}}</h6></td>
-              <td><h6>{{indicator12.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWQh&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator13.title}}</h6></td>
-              <td><h6>{{indicator13.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WYjE&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator14.title}}</h6></td>
-              <td><h6>{{indicator14.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WtP1&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>{{indicator15.title}}</h6></td>
-              <td><h6>{{indicator15.symbol}}</h6></td>
-              <td>
-                <a
-                  href="#"
-                  class="theme-btn theme-btn-2 wow fadeInRight"
-                  data-wow-delay=".8s"
-                  >Learn More</a
-                >
-              </td>
-              <td>
-                <iframe
-                  src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WYjM&width=670&height=475"
-                  scrolling="no"
-                  frameborder="0"
-                  style="overflow: hidden; width: 670px; height: 525px"
-                  allowTransparency="true"
-                  loading="lazy"
-                ></iframe>
-              </td>
-            </tr>
+            {% endfor %} {% else %}
+            <p>No results!</p>
+            {% endif %}
           </tbody>
         </table>
       </div>

@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Indicators(models.Model):
     title = models.CharField(max_length=255)
     symbol = models.CharField(max_length=30)

@@ -45,7 +45,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'datahilo'
+            BASE_DIR / 'templates'
         ],
         'OPTIONS': {
             'context_processors': [

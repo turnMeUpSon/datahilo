@@ -44,9 +44,10 @@
     <nav class="navbar bg-light">
       <div class="container-fluid">
         <a class="navbar-brand"><h2>Harbingers of the crisis</h2></a>
-        <form class="d-flex" role="search">
+        <form action="" method="get" class="d-flex" role="search">
           <input
             class="form-control me-2"
+            name="query"
             type="search"
             placeholder="Search indicators"
             aria-label="Search"
@@ -60,6 +61,7 @@
         <thead>
           <tr>
             <th scope="col"><h4>Name</h4></th>
+            <th scope="col"><h4>Symbol</h4></th>
             <th scope="col"><h4>Details</h4></th>
             <th scope="col"><h4>Indicator</h4></th>
           </tr>
@@ -68,10 +70,10 @@
         <tbody>
           <tr>
             <td>
-              <h6>
-                10-Year Treasury Constant Maturity Minus 2-Year Treasury
-                Constant Maturity (T10Y2Y2)
-              </h6>
+              <h6>{{indicator1.title}}</h6>
+            </td>
+            <td>
+              <h6>{{indicator1.symbol}}</h6>
             </td>
             <td>
               <a
@@ -94,9 +96,10 @@
           </tr>
           <tr>
             <td>
-              <h6>
-                Motor Vehicle Retail Sales: Heavy Weight Trucks (HTRUCKSSAAR)
-              </h6>
+              <h6>{{indicator2.title}}</h6>
+            </td>
+            <td>
+              <h6>{{indicator2.symbol}}</h6>
             </td>
             <td>
               <a
@@ -119,7 +122,10 @@
           </tr>
           <tr>
             <td>
-              <h6>Unemployment Rate (UNRATE)</h6>
+              <h6>{{indicator3.title}}</h6>
+            </td>
+            <td>
+              <h6>{{indicator3.symbol}}</h6>
             </td>
             <td>
               <a
@@ -142,7 +148,10 @@
           </tr>
           <tr>
             <td>
-              <h6>Federal Funds Effective Rate and CPI in USA (FFERCPI)</h6>
+              <h6>{{indicator4.title}}</h6>
+            </td>
+            <td>
+              <h6>{{indicator4.symbol}}</h6>
             </td>
             <td>
               <a
@@ -165,10 +174,10 @@
           </tr>
           <tr>
             <td>
-              <h6>
-                10-Year Treasury Constant Maturity Minus 3-Month Treasury
-                Constant Maturity (T10Y3M)
-              </h6>
+              <h6>{{indicator5.title}}</h6>
+            </td>
+            <td>
+              <h6>{{indicator5.symbol}}</h6>
             </td>
             <td>
               <a
@@ -190,7 +199,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>Global price of Food index (PFOODINDEXM)</h6></td>
+            <td><h6>{{indicator6.title}}</h6></td>
+            <td><h6>{{indicator6.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -211,7 +221,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>U.S. Natural Gas Liquid Composite Price (MNGLCP)</h6></td>
+            <td><h6>{{indicator7.title}}</h6></td>
+            <td><h6>{{indicator7.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -232,7 +243,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>Real Gross Domestic Product (GDPC1)</h6></td>
+            <td><h6>{{indicator8.title}}</h6></td>
+            <td><h6>{{indicator8.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -254,8 +266,9 @@
           </tr>
           <tr>
             <td>
-              <h6>Industrial Production and Capacity Utilization (IPCUM)</h6>
+              <h6>{{indicator9.title}}</h6>
             </td>
+            <td><h6>{{indicator9.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -276,7 +289,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>Initial Claims (ICSA)</h6></td>
+            <td><h6>{{indicator10.title}}</h6></td>
+            <td><h6>{{indicator10.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -297,7 +311,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>Real Personal Consumption Expenditures (PCEC96)</h6></td>
+            <td><h6>{{indicator11.title}}</h6></td>
+            <td><h6>{{indicator11.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -318,7 +333,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>Advance Retail Sales: Retail Trade (RSXFS)</h6></td>
+            <td><h6>{{indicator12.title}}</h6></td>
+            <td><h6>{{indicator12.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -339,7 +355,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>Merchant Wholesalers Sales (WHLSLRSMSA)</h6></td>
+            <td><h6>{{indicator13.title}}</h6></td>
+            <td><h6>{{indicator13.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -360,7 +377,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>Total Business Inventories (BUSINV)</h6></td>
+            <td><h6>{{indicator14.title}}</h6></td>
+            <td><h6>{{indicator14.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -381,7 +399,8 @@
             </td>
           </tr>
           <tr>
-            <td><h6>US Total Consumer Credit Outstanding</h6></td>
+            <td><h6>{{indicator15.title}}</h6></td>
+            <td><h6>{{indicator15.symbol}}</h6></td>
             <td>
               <a
                 href="#"
@@ -400,18 +419,6 @@
                 loading="lazy"
               ></iframe>
             </td>
-          </tr>
-          <tr>
-            <td><h6>Test</h6></td>
-            <td>
-              <a
-                href="#"
-                class="theme-btn theme-btn-2 wow fadeInRight"
-                data-wow-delay=".8s"
-                >Learn More</a
-              >
-            </td>
-            <td>test</td>
           </tr>
         </tbody>
       </table>
