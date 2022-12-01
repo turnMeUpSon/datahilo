@@ -97,7 +97,9 @@
                     <a class="page-scroll" href="#about">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="page-scroll" href="#data">Data</a>
+                    <a class="page-scroll" href="{% url 'dashboard' %}"
+                      >Analytics</a
+                    >
                   </li>
                   <li class="nav-item">
                     <a class="page-scroll" href="#team">Team</a>
@@ -138,7 +140,7 @@
                 recession
               </p>
               <a
-                href="{% url 'test' %}"
+                href="{% url 'dashboard' %}"
                 class="theme-btn wow fadeInUp"
                 data-wow-delay=".6s"
                 >Get started</a
@@ -291,7 +293,7 @@
     <br />
 
     <!-- ========================= data-section end ========================= -->
-    <section id="data">
+    <section>
       <nav class="navbar bg-light">
         <div class="container-fluid">
           <a class="navbar-brand"><h2>Harbingers of the crisis</h2></a>
@@ -328,10 +330,10 @@
           <tbody>
             <tr>
               <td>
-                <h6>{{indicator1.title}}</h6>
+                <h6>{{treasury_y10__minus_y2.title}}</h6>
               </td>
               <td>
-                <h6>{{indicator1.symbol}}</h6>
+                <h6>{{treasury_y10__minus_y2.symbol}}</h6>
               </td>
               <td>
                 <a
@@ -354,10 +356,14 @@
             </tr>
             <tr>
               <td>
-                <h6>{{indicator2.title}}</h6>
+                <h6>
+                  {{motor_vehicle_retail_sales_heavy_weight_trucks.title}}
+                </h6>
               </td>
               <td>
-                <h6>{{indicator2.symbol}}</h6>
+                <h6>
+                  {{motor_vehicle_retail_sales_heavy_weight_trucks.symbol}}
+                </h6>
               </td>
               <td>
                 <a
@@ -380,10 +386,10 @@
             </tr>
             <tr>
               <td>
-                <h6>{{indicator3.title}}</h6>
+                <h6>{{unemployment_rate.title}}</h6>
               </td>
               <td>
-                <h6>{{indicator3.symbol}}</h6>
+                <h6>{{unemployment_rate.symbol}}</h6>
               </td>
               <td>
                 <a
@@ -406,10 +412,10 @@
             </tr>
             <tr>
               <td>
-                <h6>{{indicator4.title}}</h6>
+                <h6>{{federal_funds_effective_rate_and_cpi_usa.title}}</h6>
               </td>
               <td>
-                <h6>{{indicator4.symbol}}</h6>
+                <h6>{{federal_funds_effective_rate_and_cpi_usa.symbol}}</h6>
               </td>
               <td>
                 <a
@@ -432,10 +438,10 @@
             </tr>
             <tr>
               <td>
-                <h6>{{indicator5.title}}</h6>
+                <h6>{{treasury_y10_minus_m3.title}}</h6>
               </td>
               <td>
-                <h6>{{indicator5.symbol}}</h6>
+                <h6>{{treasury_y10_minus_m3.symbol}}</h6>
               </td>
               <td>
                 <a
@@ -457,8 +463,8 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator6.title}}</h6></td>
-              <td><h6>{{indicator6.symbol}}</h6></td>
+              <td><h6>{{global_price_of_food_index.title}}</h6></td>
+              <td><h6>{{global_price_of_food_index.symbol}}</h6></td>
               <td>
                 <a
                   href="#"
@@ -479,8 +485,10 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator7.title}}</h6></td>
-              <td><h6>{{indicator7.symbol}}</h6></td>
+              <td><h6>{{natural_gas_liquid_composite_price_usa.title}}</h6></td>
+              <td>
+                <h6>{{natural_gas_liquid_composite_price_usa.symbol}}</h6>
+              </td>
               <td>
                 <a
                   href="#"
@@ -501,8 +509,8 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator8.title}}</h6></td>
-              <td><h6>{{indicator8.symbol}}</h6></td>
+              <td><h6>{{real_gross_domestic_product.title}}</h6></td>
+              <td><h6>{{real_gross_domestic_product.symbol}}</h6></td>
               <td>
                 <a
                   href="#"
@@ -524,9 +532,15 @@
             </tr>
             <tr>
               <td>
-                <h6>{{indicator9.title}}</h6>
+                <h6>
+                  {{industrial_production_and_capacity_utilization.title}}
+                </h6>
               </td>
-              <td><h6>{{indicator9.symbol}}</h6></td>
+              <td>
+                <h6>
+                  {{industrial_production_and_capacity_utilization.symbol}}
+                </h6>
+              </td>
               <td>
                 <a
                   href="#"
@@ -547,8 +561,8 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator10.title}}</h6></td>
-              <td><h6>{{indicator10.symbol}}</h6></td>
+              <td><h6>{{initial_claims.title}}</h6></td>
+              <td><h6>{{initial_claims.symbol}}</h6></td>
               <td>
                 <a
                   href="#"
@@ -569,8 +583,10 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator11.title}}</h6></td>
-              <td><h6>{{indicator11.symbol}}</h6></td>
+              <td><h6>{{real_personal_consumption_expenditures.title}}</h6></td>
+              <td>
+                <h6>{{real_personal_consumption_expenditures.symbol}}</h6>
+              </td>
               <td>
                 <a
                   href="#"
@@ -591,8 +607,8 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator12.title}}</h6></td>
-              <td><h6>{{indicator12.symbol}}</h6></td>
+              <td><h6>{{advance_retail_sales_retail_trade.title}}</h6></td>
+              <td><h6>{{advance_retail_sales_retail_trade.symbol}}</h6></td>
               <td>
                 <a
                   href="#"
@@ -613,8 +629,8 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator13.title}}</h6></td>
-              <td><h6>{{indicator13.symbol}}</h6></td>
+              <td><h6>{{merchant_wholesalers_sales.title}}</h6></td>
+              <td><h6>{{merchant_wholesalers_sales.symbol}}</h6></td>
               <td>
                 <a
                   href="#"
@@ -635,8 +651,8 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator14.title}}</h6></td>
-              <td><h6>{{indicator14.symbol}}</h6></td>
+              <td><h6>{{total_business_inventories.title}}</h6></td>
+              <td><h6>{{total_business_inventories.symbol}}</h6></td>
               <td>
                 <a
                   href="#"
@@ -657,8 +673,8 @@
               </td>
             </tr>
             <tr>
-              <td><h6>{{indicator15.title}}</h6></td>
-              <td><h6>{{indicator15.symbol}}</h6></td>
+              <td><h6>{{total_consumer_credit_outstanding_usa.title}}</h6></td>
+              <td><h6>{{total_consumer_credit_outstanding_usa.symbol}}</h6></td>
               <td>
                 <a
                   href="#"
@@ -746,6 +762,7 @@
 
     <!-- ========================= footer start ========================= -->
     <footer
+      id="contact"
       class="footer pt-100 img-bg"
       style="background-color: rgba(19, 19, 233, 0.792)"
     >

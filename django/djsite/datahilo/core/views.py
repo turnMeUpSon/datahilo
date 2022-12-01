@@ -1,36 +1,37 @@
 from django.shortcuts import render
 from .models import *
-from django.db.models import Q
 
 
 def index(request):
-    indicator1 = Indicators.objects.get(pk=1)
-    indicator2 = Indicators.objects.get(pk=2)
-    indicator3 = Indicators.objects.get(pk=3)
-    indicator4 = Indicators.objects.get(pk=4)
-    indicator5 = Indicators.objects.get(pk=5)
-    indicator6 = Indicators.objects.get(pk=6)
-    indicator7 = Indicators.objects.get(pk=7)
-    indicator8 = Indicators.objects.get(pk=8)
-    indicator9 = Indicators.objects.get(pk=9)
-    indicator10 = Indicators.objects.get(pk=10)
-    indicator11 = Indicators.objects.get(pk=11)
-    indicator12 = Indicators.objects.get(pk=12)
-    indicator13 = Indicators.objects.get(pk=13)
-    indicator14 = Indicators.objects.get(pk=14)
-    indicator15 = Indicators.objects.get(pk=15)
+    treasury_y10__minus_y2 = Indicators.objects.get(pk=1)
+    motor_vehicle_retail_sales_heavy_weight_trucks = Indicators.objects.get(
+        pk=2)
+    unemployment_rate = Indicators.objects.get(pk=3)
+    federal_funds_effective_rate_and_cpi_usa = Indicators.objects.get(pk=4)
+    treasury_y10_minus_m3 = Indicators.objects.get(pk=5)
+    global_price_of_food_index = Indicators.objects.get(pk=6)
+    natural_gas_liquid_composite_price_usa = Indicators.objects.get(pk=7)
+    real_gross_domestic_product = Indicators.objects.get(pk=8)
+    industrial_production_and_capacity_utilization = Indicators.objects.get(
+        pk=9)
+    initial_claims = Indicators.objects.get(pk=10)
+    real_personal_consumption_expenditures = Indicators.objects.get(pk=11)
+    advance_retail_sales_retail_trade = Indicators.objects.get(pk=12)
+    merchant_wholesalers_sales = Indicators.objects.get(pk=13)
+    total_business_inventories = Indicators.objects.get(pk=14)
+    total_consumer_credit_outstanding_usa = Indicators.objects.get(pk=15)
 
     return render(request, 'core/index.html', {
-        'indicator1': indicator1, 'indicator2': indicator2, 'indicator3': indicator3,
-        'indicator4': indicator4, 'indicator5': indicator5, 'indicator6': indicator6,
-        'indicator7': indicator7, 'indicator8': indicator8, 'indicator9': indicator9,
-        'indicator10': indicator10, 'indicator11': indicator11, 'indicator12': indicator12,
-        'indicator13': indicator13, 'indicator14': indicator14, 'indicator15': indicator15
+        'treasury_y10__minus_y2': treasury_y10__minus_y2, 'motor_vehicle_retail_sales_heavy_weight_trucks': motor_vehicle_retail_sales_heavy_weight_trucks, 'unemployment_rate': unemployment_rate,
+        'federal_funds_effective_rate_and_cpi_usa': federal_funds_effective_rate_and_cpi_usa, 'treasury_y10_minus_m3': treasury_y10_minus_m3, 'global_price_of_food_index': global_price_of_food_index,
+        'natural_gas_liquid_composite_price_usa': natural_gas_liquid_composite_price_usa, 'real_gross_domestic_product': real_gross_domestic_product, 'industrial_production_and_capacity_utilization': industrial_production_and_capacity_utilization,
+        'initial_claims': initial_claims, 'real_personal_consumption_expenditures': real_personal_consumption_expenditures, 'advance_retail_sales_retail_trade': advance_retail_sales_retail_trade,
+        'merchant_wholesalers_sales': merchant_wholesalers_sales, 'total_business_inventories': total_business_inventories, 'total_consumer_credit_outstanding_usa': total_consumer_credit_outstanding_usa
     })
 
 
-def test(request):
-    return render(request, 'core/test.html')
+def dashboard(request):
+    return render(request, 'core/dashboard.html')
 
 
 def searchbar(request):
@@ -42,3 +43,13 @@ def searchbar(request):
         else:
             print("No results")
             return render(request, 'core/searchbar.html', {})
+
+
+def get_treasury_y_10_minus_y2(request):
+    treasury_y10__minus_y2 = Indicators.objects.get(pk=1)
+    return render(request, 'core/treasury_y10_minus_y2.html', {'treasury_y10__minus_y2': treasury_y10__minus_y2})
+
+
+def get_motor_vehicle_retail_sales(request):
+    motor_vehicle_retail_sales_heavy_weight_trucks = Indicators.objects.get(pk=2)
+    return render(request, 'core/motor_vehicle_retail_sales.html', {'motor_vehicle_retail_sales_heavy_weight_trucks': motor_vehicle_retail_sales_heavy_weight_trucks})
