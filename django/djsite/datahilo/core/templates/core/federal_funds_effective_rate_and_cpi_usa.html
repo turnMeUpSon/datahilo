@@ -200,10 +200,11 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                {{treasury_y10__minus_y2.title}} Current Chart
+                {{federal_funds_effective_rate_and_cpi_usa.title}} Current Chart
+                by FRED
               </div>
               <iframe
-                src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WQBB&width=670&height=475"
+                src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWzW&width=670&height=475"
                 scrolling="no"
                 frameborder="0"
                 style="overflow: hidden; width: 700px; height: 525px"
@@ -216,18 +217,19 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                {{treasury_y10__minus_y2.title}} Chart by Machine Learning
+                {{federal_funds_effective_rate_and_cpi_usa.title}} Chart by
+                TradingView
               </div>
               <div class="card-body">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
-                  <div id="tradingview_e3b57"></div>
+                  <div id="tradingview_b78f9"></div>
                   <div class="tradingview-widget-copyright">
                     <a
-                      href="https://www.tradingview.com/symbols/FRED-T10Y2Y/"
+                      href="https://www.tradingview.com/symbols/FRED-FEDFUNDS/"
                       rel="noopener"
                       target="_blank"
-                      ><span class="blue-text">T10Y2Y Chart</span></a
+                      ><span class="blue-text">FEDFUNDS Chart</span></a
                     >
                     by TradingView
                   </div>
@@ -239,7 +241,7 @@
                     new TradingView.widget({
                       width: 700,
                       height: 525,
-                      symbol: "FRED:T10Y2Y",
+                      symbol: "FRED:FEDFUNDS",
                       interval: "D",
                       timezone: "Etc/UTC",
                       theme: "dark",
@@ -248,7 +250,7 @@
                       toolbar_bg: "#f1f3f6",
                       enable_publishing: false,
                       allow_symbol_change: true,
-                      container_id: "tradingview_e3b57",
+                      container_id: "tradingview_b78f9",
                     });
                   </script>
                 </div>
@@ -262,33 +264,15 @@
             <div class="card">
               <div class="card-header">
                 <span><i class="bi bi-table me-2"></i></span>
-                <h3>
-                  Inversion of the yield curve is the best macroeconomic
-                  indicator for a private investor
-                </h3>
+                <h3>Monetary policy easing</h3>
               </div>
               <div>
                 <p>
                   <i>
-                    The bond yield curve shows the difference between the yields
-                    of 10-year and 2-year government bonds. In a normal
-                    situation in debt markets, long-term bonds have higher
-                    yields than short-term ones. This is due to the fact that
-                    the risks for a longer period are estimated higher, since
-                    more negative events may occur over such a long period. For
-                    more risk, investors demand more returns. As a rule, short
-                    bonds are traded with lower yields, since the prospects are
-                    more predictable in a short period, and the risks are
-                    assessed less. When the curve is inverted, it means that
-                    short-term bonds yield more than long-term ones. As a
-                    result, the bond yield curve is inverted. This happens when
-                    investors expect the risks to get bigger in the short term.
-                    It is not necessary to look at the entire yield curve of
-                    bonds with different maturities. This chart shows the
-                    difference between the yield of 10- and 2-year bonds. The
-                    departure of the bond yield curve into a negative area or an
-                    area close to zero often preceded a recession and a bear
-                    market.</i
+                    This is usually an indicator of a recession, because when
+                    consumer activity falls, price growth slows down. This
+                    allows the Central Bank to lower the key rate, making loans
+                    more affordable and stimulating the economy.</i
                   >
                 </p>
               </div>
