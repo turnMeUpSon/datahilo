@@ -347,11 +347,10 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                {{motor_vehicle_retail_sales_heavy_weight_trucks.title}} Current
-                Chart
+                {{real_personal_consumption_expenditures.title}} Current Chart
               </div>
               <iframe
-                src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WTC5&width=670&height=475"
+                src="https://fred.stlouisfed.org/graph/graph-landing.php?g=VX95&width=670&height=475"
                 scrolling="no"
                 frameborder="0"
                 style="overflow: hidden; width: 700px; height: 525px"
@@ -364,19 +363,19 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                {{motor_vehicle_retail_sales_heavy_weight_trucks.title}} Chart
-                by Machine Learning
+                {{real_personal_consumption_expenditures.title}} Chart by
+                tradingview
               </div>
               <div class="card-body">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
-                  <div id="tradingview_6d243"></div>
+                  <div id="tradingview_2b040"></div>
                   <div class="tradingview-widget-copyright">
                     <a
-                      href="https://www.tradingview.com/symbols/FRED-HTRUCKSSAAR/"
+                      href="https://www.tradingview.com/symbols/FRED-PCEC96/"
                       rel="noopener"
                       target="_blank"
-                      ><span class="blue-text">HTRUCKSSAAR Chart</span></a
+                      ><span class="blue-text">PCEC96 Chart</span></a
                     >
                     by TradingView
                   </div>
@@ -388,7 +387,7 @@
                     new TradingView.widget({
                       width: 740,
                       height: 525,
-                      symbol: "FRED:HTRUCKSSAAR",
+                      symbol: "FRED:PCEC96",
                       interval: "D",
                       timezone: "Etc/UTC",
                       theme: "dark",
@@ -397,7 +396,7 @@
                       toolbar_bg: "#f1f3f6",
                       enable_publishing: false,
                       allow_symbol_change: true,
-                      container_id: "tradingview_6d243",
+                      container_id: "tradingview_2b040",
                     });
                   </script>
                 </div>
@@ -411,17 +410,22 @@
             <div class="card">
               <div class="card-header">
                 <span><i class="bi bi-table me-2"></i></span>
-                <h3>Truck Sales</h3>
+                <h3>Real Personal Consumption Expenditures</h3>
               </div>
               <div>
                 <p>
-                  <i
-                    >Trucking is an important indicator of business activity in
-                    the United States. The USA is a country of roads and cars.
-                    Therefore, economic activity obviously affects the dynamics
-                    of truck sales. The graph shows truck sales, and recessions
-                    are highlighted in gray. Sales usually peak and begin to
-                    decline a few months before the recession begins.</i
+                  <i>
+                    Real personal consumption expenditures (PCE) is the primary
+                    measure of consumer spending on goods and services in the
+                    U.S. economy. This chart shows the real (or
+                    inflation-adjusted) level of expenditures, broken down by
+                    durable goods, nondurable goods, and services. Durable goods
+                    have an average useful life of at least 3 years (e.g. motor
+                    vehicles) while nondurable goods have an average useful life
+                    of less than 3 years (e.g. food). Services are commodities
+                    that cannot be stored or inventoried and are consumed at the
+                    time of purchase (e.g., dining out). Services have been hit
+                    especially hard during the COVID-19 pandemic.</i
                   >
                 </p>
               </div>

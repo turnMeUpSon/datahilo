@@ -23,7 +23,7 @@
   </head>
   <body>
     <!-- top navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -125,6 +125,152 @@
                         ><i class="bi bi-speedometer2"></i
                       ></span>
                       <span>Federal Funds Effective Rate and CPI in USA</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'treasury_y10_minus_m3' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span
+                        >10-Year Treasury Constant Maturity Minus 3-Month
+                        Treasury Constant Maturity</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'global_price_of_food_index' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Global price of Food index</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'natural_gas_liquid_composite_price_usa' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>U.S. Natural Gas Liquid Composite Price</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'real_gross_domestic_product' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Real Gross Domestic Product</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'industrial_production_and_capacity_utilization' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span
+                        >Industrial Production, Capacity Utilization and
+                        PMI</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="{% url 'initial_claims' %}" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Initial Claims</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'real_personal_consumption_expenditures' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Real Personal Consumption Expenditures</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'advance_retail_sales_retail_trade' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Advance Retail Sales: Retail Trade</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'merchant_wholesalers_sales' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Merchant Wholesalers Sales</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'total_business_inventories' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Total Business Inventories</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a
+                      href="{% url 'total_consumer_credit_outstanding_usa' %}"
+                      class="nav-link px-3"
+                    >
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>US Total Consumer Credit Outstanding</span>
                     </a>
                   </li>
                 </ul>
@@ -239,7 +385,7 @@
                   ></script>
                   <script type="text/javascript">
                     new TradingView.widget({
-                      width: 700,
+                      width: 740,
                       height: 525,
                       symbol: "FRED:FEDFUNDS",
                       interval: "D",

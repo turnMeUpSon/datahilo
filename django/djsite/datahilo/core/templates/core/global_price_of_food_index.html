@@ -347,11 +347,10 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                {{motor_vehicle_retail_sales_heavy_weight_trucks.title}} Current
-                Chart
+                {{global_price_of_food_index.title}} Current Chart
               </div>
               <iframe
-                src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WTC5&width=670&height=475"
+                src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WWAX&width=670&height=475"
                 scrolling="no"
                 frameborder="0"
                 style="overflow: hidden; width: 700px; height: 525px"
@@ -364,19 +363,18 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                {{motor_vehicle_retail_sales_heavy_weight_trucks.title}} Chart
-                by Machine Learning
+                {{global_price_of_food_index.title}} Chart by TradingView
               </div>
               <div class="card-body">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
-                  <div id="tradingview_6d243"></div>
+                  <div id="tradingview_d519f"></div>
                   <div class="tradingview-widget-copyright">
                     <a
-                      href="https://www.tradingview.com/symbols/FRED-HTRUCKSSAAR/"
+                      href="https://www.tradingview.com/symbols/ECONOMICS-WWFPI/"
                       rel="noopener"
                       target="_blank"
-                      ><span class="blue-text">HTRUCKSSAAR Chart</span></a
+                      ><span class="blue-text">WWFPI Chart</span></a
                     >
                     by TradingView
                   </div>
@@ -388,7 +386,7 @@
                     new TradingView.widget({
                       width: 740,
                       height: 525,
-                      symbol: "FRED:HTRUCKSSAAR",
+                      symbol: "ECONOMICS:WWFPI",
                       interval: "D",
                       timezone: "Etc/UTC",
                       theme: "dark",
@@ -397,7 +395,7 @@
                       toolbar_bg: "#f1f3f6",
                       enable_publishing: false,
                       allow_symbol_change: true,
-                      container_id: "tradingview_6d243",
+                      container_id: "tradingview_d519f",
                     });
                   </script>
                 </div>
@@ -411,17 +409,14 @@
             <div class="card">
               <div class="card-header">
                 <span><i class="bi bi-table me-2"></i></span>
-                <h3>Truck Sales</h3>
+                <h3>Global price of Food index</h3>
               </div>
               <div>
                 <p>
-                  <i
-                    >Trucking is an important indicator of business activity in
-                    the United States. The USA is a country of roads and cars.
-                    Therefore, economic activity obviously affects the dynamics
-                    of truck sales. The graph shows truck sales, and recessions
-                    are highlighted in gray. Sales usually peak and begin to
-                    decline a few months before the recession begins.</i
+                  <i>
+                    Usually this is an indicator of a recession, because when
+                    consumer activity falls, the growth of food prices slows
+                    down.</i
                   >
                 </p>
               </div>
