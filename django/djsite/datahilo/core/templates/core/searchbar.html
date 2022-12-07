@@ -246,6 +246,7 @@
     <br />
 
     <!-- ========================= data-section start ========================= -->
+    <h6>{{i.title}}</h6>
     <section id="data">
       <nav class="navbar bg-light">
         <div class="container-fluid">
@@ -277,16 +278,13 @@
             <tr>
               <th scope="col"><h4>Name</h4></th>
               <th scope="col"><h4>Symbol</h4></th>
-              <th scope="col"><h4>Details</h4></th>
             </tr>
           </thead>
           <br />
           <tbody>
             {% if indicators %} {% for i in indicators %}
             <tr>
-              <td>
-                <h6>{{i.title}}</h6>
-              </td>
+              <td></td>
               <td>
                 <h6>{{i.symbol}}</h6>
               </td>
@@ -311,6 +309,7 @@
         crossorigin="anonymous"
       ></script>
     </section>
+    <th scope="col"><h4>Details</h4></th>
     <!-- ========================= data-section end ========================= -->
 
     <!-- ========================= team-section start ========================= -->

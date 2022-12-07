@@ -340,64 +340,75 @@
     </div>
     <!-- offcanvas -->
     <main class="mt-5 pt-3">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <h4>Dashboard</h4>
+      <section id="data">
+        <nav class="navbar bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand"><h2>The most important latest news</h2></a>
+            <form
+              action="{% url 'search' %}"
+              method="get"
+              class="d-flex"
+              role="search"
+            >
+              <input
+                class="form-control me-2"
+                name="query"
+                type="search"
+                placeholder="Search indicators"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
+        </nav>
+        <div class="table-responsive">
+          <table class="table table-striped table-sm">
+            <br />
+            <h3>Search results:</h3>
+            <thead>
+              <tr>
+                <th scope="col"><h4>Name</h4></th>
+                <th scope="col"><h4>Symbol</h4></th>
+              </tr>
+            </thead>
+            <br />
+            <tbody>
+              {% if description_dataset %} {% for i in description_dataset %}
+              <tr>
+                <td>
+                </td>
+                <td>
+                  <h6>{{i}}</h6>
+                </td>
+                <td>
+                  <a
+                    href="{% url 'index' %}"
+                    class="theme-btn theme-btn-2 wow fadeInRight"
+                    data-wow-delay=".8s"
+                    >Learn More</a
+                  >
+                </td>
+              </tr>
+              {% endfor %} {% else %}
+              <p>No results 😔 Please, click on the logo!</p>
+              {% endif %}
+            </tbody>
+          </table>
         </div>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <div class="card bg-primary text-white h-100">
-              <div class="card-body py-5">Primary Card</div>
-              <div class="card-footer d-flex">
-                View Details
-                <span class="ms-auto">
-                  <i class="bi bi-chevron-right"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card bg-warning text-dark h-100">
-              <div class="card-body py-5">Warning Card</div>
-              <div class="card-footer d-flex">
-                View Details
-                <span class="ms-auto">
-                  <i class="bi bi-chevron-right"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card bg-success text-white h-100">
-              <div class="card-body py-5">Success Card</div>
-              <div class="card-footer d-flex">
-                View Details
-                <span class="ms-auto">
-                  <i class="bi bi-chevron-right"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card bg-danger text-white h-100">
-              <div class="card-body py-5">Danger Card</div>
-              <div class="card-footer d-flex">
-                View Details
-                <span class="ms-auto">
-                  <i class="bi bi-chevron-right"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+          crossorigin="anonymous"
+        ></script>
+      </section>
         <div class="row">
           <div class="col-md-6 mb-3">
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                {{natural_gas_liquid_composite_price_usa.title}} Current Chart
+                S&P500 Index Current Chart
               </div>
               <!-- TradingView Widget BEGIN -->
               <div class="tradingview-widget-container">
@@ -439,8 +450,7 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                {{natural_gas_liquid_composite_price_usa.title}} Chart by
-                TradingView
+                Bitcoin Current Chart
               </div>
               <div class="card-body">
                 <!-- TradingView Widget BEGIN -->

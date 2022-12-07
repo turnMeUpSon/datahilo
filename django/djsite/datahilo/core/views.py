@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import *
+import json
+import requests
 
 
 def index(request):
@@ -29,7 +31,29 @@ def index(request):
 
 
 def dashboard(request):
-    return render(request, 'core/dashboard.html')
+    url = 'https://newsdata.io/api/1/news?apikey=pub_142623c47ec965e1e144bb93b3df9cb437f18&category=business,politics,environment,technology&language=en&country=us'
+    response = requests.get(url)
+    data = json.loads(response.text)
+    title_dataset = []
+    link_dataset = []
+    description_dataset = []
+
+    for element in data['results']:
+        title = element['title']
+        link = element['link'],
+        description = element['description']
+        data_item = {
+            'title': title,
+            'link': link,
+            'description': description
+        }
+        title_dataset.append(data_item['title'])
+        link_dataset.append(data_item['link'])
+        description_dataset.append(data_item['description'])
+
+    context = {'title_dataset': title_dataset, 'link_dataset': link_dataset, 'description_dataset': description_dataset}
+
+    return render(request, 'core/dashboard.html', context)
 
 
 def searchbar(request):

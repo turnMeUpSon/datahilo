@@ -24,5 +24,5 @@ urlpatterns = [
     path('merchant_wholesalers_sales', get_merchant_wholesalers_sales, name='merchant_wholesalers_sales'),
     path('total_business_inventories', get_total_business_inventories, name='total_business_inventories'),
     path('total_consumer_credit_outstanding_usa', get_total_consumer_credit_outstanding_usa,
-         name='total_consumer_credit_outstanding_usa')
+         name='total_consumer_credit_outstanding_usa'),
 ]
